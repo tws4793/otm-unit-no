@@ -4,6 +4,14 @@ All notable changes to this project are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and the project uses
 [Semantic Versioning](https://semver.org/).
 
+## [1.0.0-rc.3] - 2026-10-24
+
+Pre-release.
+
+### Fixed
+
+- Block 82's penthouse is #14-12, not #14-11.
+
 ## [1.0.0-rc.2] - 2026-10-24
 
 Pre-release.

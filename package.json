@@ -1,7 +1,7 @@
 {
   "name": "otm-unit-no",
   "private": true,
-  "version": "1.0.0-rc.2",
+  "version": "1.0.0-rc.3",
   "description": "Quick unit-number checker for Optima @ Tanah Merah",
   "type": "module",
   "engines": {

@@ -139,6 +139,8 @@ export function App() {
           Clear
         </button>
       </main>
+
+      <footer className="footer">Optima @ Tanah Merah · v{__APP_VERSION__}</footer>
     </div>
   );
 }

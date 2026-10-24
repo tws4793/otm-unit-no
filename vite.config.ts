@@ -1,6 +1,7 @@
 import react from '@vitejs/plugin-react';
 import { defineConfig } from 'vite';
 import { VitePWA } from 'vite-plugin-pwa';
+import pkg from './package.json' with { type: 'json' };
 
 // Served from https://<user>.github.io/otm-unit-no/ on GitHub Pages.
 // Override with BASE_PATH=/ for Docker or other root-hosted deployments.
@@ -8,6 +9,9 @@ const base = process.env.BASE_PATH ?? '/otm-unit-no/';
 
 export default defineConfig({
   base,
+  define: {
+    __APP_VERSION__: JSON.stringify(pkg.version),
+  },
   plugins: [
     react(),
     VitePWA({

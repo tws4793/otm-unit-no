@@ -51,8 +51,8 @@ export const directory: UnitDirectory = {
         range(1, 1, '10'),
         range(2, 3, '09', '10'),
         range(4, 13, '09', '10', '11', '12'),
-        // Penthouse #14-11 spans stacks 11 and 12.
-        range(14, 14, '09', '10', '11'),
+        // Penthouse #14-12 spans stacks 11 and 12.
+        range(14, 14, '09', '10', '12'),
       ],
     },
     {

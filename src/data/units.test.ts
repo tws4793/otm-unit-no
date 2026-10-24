@@ -35,6 +35,8 @@ describe('Optima @ Tanah Merah directory', () => {
     expect(valid('86', '01', '18')).toBe(true);
     expect(valid('86', '14', '19')).toBe(true);
     expect(valid('88', '14', '23')).toBe(true);
+    expect(valid('80', '14', '08')).toBe(true);
+    expect(valid('82', '14', '12')).toBe(true);
   });
 
   it('rejects void and merged units', () => {
@@ -44,7 +46,7 @@ describe('Optima @ Tanah Merah directory', () => {
     expect(valid('80', '02', '07')).toBe(false);
     expect(valid('80', '14', '07')).toBe(false);
     expect(valid('82', '01', '09')).toBe(false);
-    expect(valid('82', '14', '12')).toBe(false);
+    expect(valid('82', '14', '11')).toBe(false);
     expect(valid('86', '14', '14')).toBe(false);
     expect(valid('88', '15', '20')).toBe(false);
   });

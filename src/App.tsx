@@ -1,6 +1,7 @@
 import { useMemo, useRef, useState } from 'react';
 import { directory } from './data/units';
 import { checkUnit, normalise } from './lib/units';
+import { ThemeToggle } from './ThemeToggle';
 
 const ANY = '';
 const blocks = directory.blocks.map((b) => b.block);
@@ -42,6 +43,7 @@ export function App() {
     <div className="app">
       <header className="header">
         <h1>OTM Unit Check</h1>
+        <ThemeToggle />
       </header>
 
       <main className="main">

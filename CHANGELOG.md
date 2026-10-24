@@ -4,6 +4,16 @@ All notable changes to this project are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and the project uses
 [Semantic Versioning](https://semver.org/).
 
+## [1.0.0-rc.2] - 2026-10-24
+
+Pre-release.
+
+### Changed
+
+- The unit list now comes from the developer's elevation chart (297 units in Blocks 78, 80,
+  82, 86 and 88) and is marked as verified.
+- Block 84 is removed because it is not a residential block.
+
 ## [1.0.0-rc.1] - 2026-10-24
 
 Pre-release for trial use at the gates. The unit list is still unverified.

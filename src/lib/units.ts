@@ -20,11 +20,8 @@ export function normalise(value: string): string {
 }
 
 function hasUnit(layout: BlockLayout, level: string, unit: string): boolean {
-  const key = `${level}-${unit}`;
-  if (layout.extra?.includes(key)) return true;
-  if (layout.absent?.includes(key)) return false;
   const n = Number(level);
-  return n >= layout.levels.from && n <= layout.levels.to && layout.stacks.includes(unit);
+  return layout.ranges.some((r) => n >= r.from && n <= r.to && r.units.includes(unit));
 }
 
 export function checkUnit(directory: UnitDirectory, query: UnitQuery): UnitResult {

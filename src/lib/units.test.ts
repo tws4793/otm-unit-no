@@ -5,8 +5,20 @@ import { checkUnit, normalise } from './units';
 const fixture: UnitDirectory = {
   verified: true,
   blocks: [
-    { block: '80', levels: { from: 1, to: 14 }, stacks: ['05', '06'], absent: ['14-06'] },
-    { block: '82', levels: { from: 2, to: 14 }, stacks: ['10', '12'], extra: ['15-12'] },
+    {
+      block: '80',
+      ranges: [
+        { from: 1, to: 13, units: ['05', '06'] },
+        { from: 14, to: 14, units: ['05'] },
+      ],
+    },
+    {
+      block: '82',
+      ranges: [
+        { from: 2, to: 14, units: ['10', '12'] },
+        { from: 15, to: 15, units: ['12'] },
+      ],
+    },
   ],
 };
 
@@ -48,7 +60,7 @@ describe('checkUnit', () => {
     expect(checkUnit(fixture, { block: '80', level: '00', unit: '05' }).valid).toBe(false);
   });
 
-  it('honours absent and extra units', () => {
+  it('applies per-range units', () => {
     expect(checkUnit(fixture, { block: '80', level: '14', unit: '06' }).valid).toBe(false);
     expect(checkUnit(fixture, { block: '82', level: '15', unit: '12' }).valid).toBe(true);
   });
